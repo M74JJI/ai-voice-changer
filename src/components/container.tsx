@@ -77,7 +77,10 @@ export default function Container() {
         <div className="relative  p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-semibold text-white flex items-center gap-1">
+              <h3
+                className="text-lg font-semibold text-white flex items-center gap-1 cursor-pointer"
+                onClick={() => setFile(null)}
+              >
                 <VoiceIcon />
                 Ai Voice Changer
               </h3>
