@@ -71,7 +71,7 @@ export default function AudioPlayer({
         }
       };
     }
-  }, [file, audioUrl]); // Dependency on 'file' to trigger reloading when the file changes
+  }, [file]); // Dependency on 'file' to trigger reloading when the file changes
 
   const togglePlayPause = () => {
     if (audioRef.current) {
@@ -89,7 +89,6 @@ export default function AudioPlayer({
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
-  console.log("file", file);
   return (
     <>
       {/* Hidden Audio Player */}
